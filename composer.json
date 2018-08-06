@@ -1,0 +1,44 @@
+{
+  "name": "refineddigital/social-media",
+  "description": "Social Media module for RefinedCMS",
+  "type": "project",
+  "repositories": [
+      {
+          "type": "path",
+          "url": "../cms",
+          "options": {
+              "symlink": true
+          }
+      }
+  ],
+  "require": {
+    "refineddigital/cms": "dev-master"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Matthias Law",
+      "email": "matthias@refineddigital.co.nz"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RefinedDigital\\SocialMedia\\": "src/"
+    },
+    "files": [
+        "src/Module/Helpers/helpers.php"
+    ]
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "RefinedDigital\\SocialMedia\\Module\\Providers\\SocialMediaServiceProvider"
+      ],
+      "aliases": {
+      }
+    }
+  }
+}
