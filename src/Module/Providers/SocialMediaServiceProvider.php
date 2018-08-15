@@ -23,9 +23,11 @@ class SocialMediaServiceProvider extends ServiceProvider
         ]);
 
         if ($this->app->runningInConsole()) {
-            $this->commands([
-                Install::class
-            ]);
+            if (!\Schema::hasTable('social_media')) {
+                $this->commands([
+                    Install::class
+                ]);
+            }
         }
 
         /*$this->publishes([
