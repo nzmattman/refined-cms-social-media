@@ -1,5 +1,5 @@
 {
-  "name": "refineddigital/social-media",
+  "name": "refineddigital/cms-social-media",
   "description": "Social Media module for RefinedCMS",
   "require": {
     "php": "^7.1.3",
