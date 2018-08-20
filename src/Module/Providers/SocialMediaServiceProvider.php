@@ -23,7 +23,7 @@ class SocialMediaServiceProvider extends ServiceProvider
         ]);
 
         if ($this->app->runningInConsole()) {
-            if (!\Schema::hasTable('social_media')) {
+            if (\DB::connection()->getDatabaseName() && !\Schema::hasTable('social_media')) {
                 $this->commands([
                     Install::class
                 ]);

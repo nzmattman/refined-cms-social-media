@@ -25,7 +25,8 @@ class SocialMediaController extends CoreController
         parent::__construct($coreRepository);
     }
 
-    public function setup() {
+    public function setup()
+    {
 
         $table = new \stdClass();
         $table->fields = [
