@@ -19,7 +19,7 @@ class SocialMediaController extends CoreController
 
     public function __construct(CoreRepository $coreRepository)
     {
-        $this->socialMediaRepository = new SocialMediaRepository();
+        $this->socialMediaRepository = new CoreRepository();
         $this->socialMediaRepository->setModel($this->model);
 
         parent::__construct($coreRepository);
