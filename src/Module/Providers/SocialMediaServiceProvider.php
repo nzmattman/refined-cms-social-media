@@ -19,7 +19,7 @@ class SocialMediaServiceProvider extends ServiceProvider
     {
         view()->addNamespace('socialMedia', [
             __DIR__.'/../Resources/views',
-            app_path().'/views'
+            base_path().'/resources/views'
         ]);
 
         if ($this->app->runningInConsole()) {
@@ -46,7 +46,7 @@ class SocialMediaServiceProvider extends ServiceProvider
             ->addRouteFile('socialMedia', __DIR__.'/../Http/routes.php');
 
         $menuConfig = [
-            'order' => 3,
+            'order' => 300,
             'name' => 'Social Media',
             'icon' => 'fas fa-share-alt',
             'route' => 'social-media',
