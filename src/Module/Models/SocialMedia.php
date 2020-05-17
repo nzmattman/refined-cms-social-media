@@ -31,7 +31,9 @@ class SocialMedia extends CoreModel implements Sortable
                 [
                     [ 'label' => 'Name', 'name' => 'name', 'required' => true],
                     [ 'label' => 'Link', 'name' => 'link', 'required' => true],
-                    [ 'label' => 'SVG Icon', 'name' => 'svg_icon', 'required' => true],
+                ],
+                [
+                    [ 'label' => 'SVG Icon', 'name' => 'svg_icon', 'required' => true, 'type' => 'textarea'],
                 ]
             ]
         ]
