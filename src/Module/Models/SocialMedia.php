@@ -11,7 +11,7 @@ class SocialMedia extends CoreModel implements Sortable
     use SoftDeletes;
 
     protected $fillable = [
-        'active', 'position', 'name', 'icon', 'link',
+        'active', 'position', 'name', 'svg_icon', 'link',
     ];
 
     protected $table = 'social_media';
@@ -30,8 +30,8 @@ class SocialMedia extends CoreModel implements Sortable
                 ],
                 [
                     [ 'label' => 'Name', 'name' => 'name', 'required' => true],
-                    [ 'label' => 'Icon', 'name' => 'icon', 'required' => true, 'note' => 'Icons are using <a href="https://www.fontawesome.com/icons" target="_blank">fontawesome.com</a> icon set.<br/> Find the icon you want to use, click on it and select the full <code>class</code> path, ie <code>fas fa-share-alt-square</code>'],
                     [ 'label' => 'Link', 'name' => 'link', 'required' => true],
+                    [ 'label' => 'SVG Icon', 'name' => 'svg_icon', 'required' => true],
                 ]
             ]
         ]
