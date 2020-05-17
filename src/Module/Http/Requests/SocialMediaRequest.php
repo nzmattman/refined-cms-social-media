@@ -26,8 +26,8 @@ class SocialMediaRequest extends FormRequest
 
         $args = [
             'name'               => ['required' => 'required'],
-            'icon'               => ['required' => 'required'],
-            'svg_link'           => ['required' => 'required'],
+            'svg_icon'           => ['required' => 'required'],
+            'link'               => ['required' => 'required'],
         ];
 
         // return the results to set for validation
