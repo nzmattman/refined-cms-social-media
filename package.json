@@ -1,5 +1,5 @@
 {
-  "name": "@refineddigital/social-media",
+  "name": "@refineddigital/cms-social-media",
   "version": "1.1.1",
   "scripts": {
     "publish-and-tag": "git push --tags && git push origin master",
