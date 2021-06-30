@@ -22,13 +22,15 @@ class SocialMediaServiceProvider extends ServiceProvider
             __DIR__.'/../Resources/views',
         ]);
 
-        if ($this->app->runningInConsole()) {
-            if (\DB::connection()->getDatabaseName() && !\Schema::hasTable('social_media')) {
-                $this->commands([
-                    Install::class
-                ]);
+        try {
+            if ($this->app->runningInConsole()) {
+                if (\DB::connection()->getDatabaseName() && !\Schema::hasTable('social_media')) {
+                    $this->commands([
+                        Install::class
+                    ]);
+                }
             }
-        }
+        } catch (\Exception $e) {}
 
         /*$this->publishes([
             __DIR__.'/../../../config/socialMedia.php' => config_path('socialMedia.php'),
