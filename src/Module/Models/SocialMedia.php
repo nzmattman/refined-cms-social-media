@@ -24,18 +24,54 @@ class SocialMedia extends CoreModel implements Sortable
     public $formFields = [
         [
             'name' => 'Content',
-            'fields' => [
-                [
-                    [ 'label' => 'Active', 'name' => 'active', 'required' => true, 'type' => 'select', 'options' => [1 => 'Yes', 0 => 'No'] ],
+            'sections' => [
+                'left' => [
+                    'blocks' => [
+                        [
+                            'name' => 'Content',
+                            'fields' => [
+                                [
+                                    [ 'label' => 'Name', 'name' => 'name', 'required' => true],
+                                    [ 'label' => 'Link', 'name' => 'link', 'required' => true],
+                                ]
+                            ]
+                        ]
+                    ]
                 ],
-                [
-                    [ 'label' => 'Name', 'name' => 'name', 'required' => true],
-                    [ 'label' => 'Link', 'name' => 'link', 'required' => true],
-                ],
-                [
-                    [ 'label' => 'SVG Icon', 'name' => 'svg_icon', 'required' => true, 'type' => 'textarea'],
+                'right' => [
+                    'blocks' => [
+                        [
+                            'name' => 'Settings',
+                            'fields' => [
+                                [
+                                    [ 'label' => 'Active', 'name' => 'active', 'required' => true, 'type' => 'select', 'options' => [1 => 'Yes', 0 => 'No'] ],
+                                ],
+                            ]
+                        ]
+                    ]
                 ]
             ]
         ]
     ];
+
+    protected $blockIcon = [
+        'name' => 'Icon',
+        'fields' => [
+            [
+                [ 'label' => 'SVG Icon', 'name' => 'svg_icon', 'required' => true, 'type' => 'textarea', 'hideLabel' => true],
+            ]
+        ]
+    ];
+
+    public function setFormFields()
+    {
+        $config = config('social-media');
+        $fields = $this->formFields;
+
+        if (isset($config['hasIcons']) && $config['hasIcons']) {
+            array_splice($fields[0]['sections']['right']['blocks'], 1, 0, [$this->blockIcon]);
+        }
+
+        return $fields;
+    }
 }

@@ -32,9 +32,10 @@ class SocialMediaServiceProvider extends ServiceProvider
             }
         } catch (\Exception $e) {}
 
-        /*$this->publishes([
-            __DIR__.'/../../../config/socialMedia.php' => config_path('socialMedia.php'),
-        ], 'socialMedia');*/
+
+        $this->publishes([
+            __DIR__.'/../../../config/social-media.php' => config_path('social-media.php'),
+        ], 'social-media');
     }
 
     /**

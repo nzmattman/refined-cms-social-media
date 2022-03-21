@@ -31,7 +31,7 @@ class SocialMediaController extends CoreController
         $table = new \stdClass();
         $table->fields = [
             (object) [ 'name' => 'Name', 'field' => 'name', 'sortable' => true],
-            (object) [ 'name' => 'Icon', 'field' => 'svg_icon', 'sortable' => true, 'type' => 'svg-icon'],
+            (object) [ 'name' => 'Link', 'field' => 'link', 'sortable' => true, ],
             (object) [ 'name' => 'Active', 'field' => 'active', 'type'=> 'select', 'options' => [1 => 'Yes', 0 => 'No'], 'sortable' => true, 'classes' => ['data-table__cell--active']],
         ];
         $table->routes = (object) [

@@ -1,0 +1,5 @@
+<?php
+
+return [
+  'hasIcons' => false
+];

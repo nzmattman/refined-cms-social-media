@@ -20,8 +20,8 @@ class CreateSocialMediaTable extends Migration
             $table->boolean('active')->default(1);
             $table->integer('position');
             $table->string('name');
-            $table->text('svg_icon');
             $table->string('link');
+            $table->text('svg_icon')->nullable();
         });
     }
 
