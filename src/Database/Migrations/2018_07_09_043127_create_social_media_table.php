@@ -21,7 +21,7 @@ class CreateSocialMediaTable extends Migration
             $table->integer('position');
             $table->string('name');
             $table->string('link');
-            $table->text('svg_icon')->nullable();
+            $table->integer('icon')->nullable();
         });
     }
 

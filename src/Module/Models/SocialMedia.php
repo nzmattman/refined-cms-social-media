@@ -11,7 +11,7 @@ class SocialMedia extends CoreModel implements Sortable
     use SoftDeletes;
 
     protected $fillable = [
-        'active', 'position', 'name', 'svg_icon', 'link',
+        'active', 'position', 'name', 'icon', 'link',
     ];
 
     protected $table = 'social_media';
@@ -58,7 +58,7 @@ class SocialMedia extends CoreModel implements Sortable
         'name' => 'Icon',
         'fields' => [
             [
-                [ 'label' => 'SVG Icon', 'name' => 'svg_icon', 'required' => true, 'type' => 'textarea', 'hideLabel' => true],
+                [ 'label' => 'SVG Icon', 'name' => 'icon', 'required' => true, 'type' => 'image', 'hideLabel' => true, 'note' => 'For best results, use an <code>svg</code> image'],
             ]
         ]
     ];
