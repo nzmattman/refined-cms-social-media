@@ -1,5 +1,5 @@
 <?php
 
 return [
-  'hasIcons' => false
+  'hasIcons' => true
 ];
