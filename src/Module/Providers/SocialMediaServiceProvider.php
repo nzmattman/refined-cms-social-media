@@ -64,5 +64,7 @@ class SocialMediaServiceProvider extends ServiceProvider
                 'repository' => \RefinedDigital\SocialMedia\Module\Http\Repositories\SocialMediaRepository::class,
                 'model' => '\\RefinedDigital\\SocialMedia\\Module\\Models\\SocialMedia',
             ]);
+
+        $this->mergeConfigFrom(__DIR__.'/../../../config/social-media.php', 'social-media');
     }
 }
