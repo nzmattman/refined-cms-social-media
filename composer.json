@@ -2,7 +2,7 @@
   "name": "refineddigital/cms-social-media",
   "description": "Social Media module for RefinedCMS",
   "require": {
-    "refineddigital/cms": "^1.10|dev-master"
+    "refineddigital/cms": "^1.18|dev-master"
   },
   "license": "MIT",
   "authors": [
